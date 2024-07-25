@@ -1,0 +1,24 @@
+.con{
+    text-align: center;
+}
+
+#num{
+    width: 900px;
+    height: 620px;
+    border: 1px solid black;
+    background-color:brown;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    margin-top: 20px;
+    margin-left: 670px;
+    width: 150px;
+    height: 40px;
+}
+.w1{
+    color: white;
+}
