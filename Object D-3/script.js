@@ -35,3 +35,5 @@ let a=Math.round(Math.random() * arr.length);
 
 document.getElementById("num").innerHTML=`<h1 class="w1">${arr[a].quote}</h1> <h3 class="w1">${arr[a].Name}</h3>`;
 }
+
+def()
