@@ -1,0 +1,140 @@
+/* Reset some default browser styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+    padding-left: 15px;
+    display: inline;
+}
+
+.navbar nav {
+    display: inline-block;
+    float: right;
+    padding-right: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 60px; /* Adjust based on navbar height */
+}
+
+.sidebar {
+    width: 600px;
+    height: 700px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    position: sticky;
+    top: 60px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: 200px; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+.p1{
+    border: 1px solid black;
+    width: 250px;
+    height: 450px;
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.image{
+    /* border: 1px solid black; */
+    height: 200px;
+    margin: auto;
+}
+.text{
+    height: 120px;
+    /* border: 1px solid black; */
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+.price{
+    /* border: 1px solid black; */
+    width: 100%;
+    /* margin-top: 5px; */
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}

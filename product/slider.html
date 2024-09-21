@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+        }
+
+        .slider-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 10px;
+            flex: 0 0 auto;
+            width: 250px;
+            text-align: center;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .slider-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .slider-card h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .slider-card p {
+            font-size: 16px;
+            margin: 0;
+            color: #888;
+        }
+
+        /* Slider arrows */
+        .slider-arrow {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            color: #000;
+        }
+
+        .slider-arrow.left {
+            left: -40px;
+        }
+
+        .slider-arrow.right {
+            right: -40px;
+        }
+
+        .slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider-arrow left" onclick="slide(-1)">
+        &#10094;
+    </div>
+
+    <div class="slider">
+        <!-- Card 1 -->
+        <div class="slider-card">
+            <img src="https://via.placeholder.com/250x300?text=Fossil" alt="Fossil">
+            <h5>FOSSIL</h5>
+            <p>Up to 40% OFF</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="slider-card">
+            <img src="https://via.placeholder.com/250x300?text=Skechers" alt="Skechers">
+            <h5>SKECHERS</h5>
+            <p>Up to 40% OFF</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="slider-card">
+            <img src="https://via.placeholder.com/250x300?text=Skybags" alt="Skybags">
+            <h5>SKYBAGS</h5>
+            <p>Up to 70% OFF</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="slider-card">
+            <img src="https://via.placeholder.com/250x300?text=Louis" alt="Louis">
+            <h5>LOUIS</h5>
+            <p>Up to 70% OFF</p>
+        </div>
+    </div>
+
+    <div class="slider-arrow right" onclick="slide(1)">
+        &#10095;
+    </div>
+</div>
+
+<!-- Bootstrap JS (optional but necessary for some functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // JavaScript to control the slider scrolling
+    function slide(direction) {
+        const slider = document.querySelector('.slider');
+        const scrollAmount = slider.clientWidth / 1.2; // Amount to scroll (adjust for smoothness)
+        slider.scrollBy({left: direction * scrollAmount, behavior: 'smooth'});
+    }
+</script>
+
+</body>
+</html>
